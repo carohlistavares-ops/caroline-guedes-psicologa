@@ -9,7 +9,7 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-paper/85 border-b border-ink/10">
+    <header className="border-b border-ink/10 bg-paper">
       <div className="container-content flex items-center justify-between py-4">
         <a href="#top" className="font-display text-lg text-ink">
           {site.nome}
