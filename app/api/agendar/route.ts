@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: `"Site Caroline Guedes" <${process.env.SMTP_USER}>`,
+      from: `"Novo pedido — ${nome} (${email})" <${process.env.SMTP_USER}>`,
       to: process.env.DESTINO_EMAIL,
       replyTo: email,
       subject: `Novo pedido de consulta — ${nome}`,
