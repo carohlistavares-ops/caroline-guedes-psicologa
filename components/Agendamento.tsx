@@ -14,8 +14,8 @@ export default function Agendamento() {
     setStatus("loading");
     setErro(null);
 
-    const form = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(form.entries());
+    const form = e.currentTarget;
+    const payload = Object.fromEntries(new FormData(form).entries());
 
     try {
       const res = await fetch("/api/agendar", {
@@ -30,7 +30,7 @@ export default function Agendamento() {
       }
 
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset();
     } catch (err) {
       setStatus("error");
       setErro(err instanceof Error ? err.message : "Erro inesperado.");
