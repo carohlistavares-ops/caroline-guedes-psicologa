@@ -27,7 +27,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Caroline Guedes | Psicóloga Clínica — CRP 13/12977",
   description:
-    "Atendimento psicológico clínico presencial e on-line, com base na Terapia Cognitivo-Comportamental (TCC). Especializações em Neuropsicologia e Psicologia em Saúde.",
+    "Atendimento psicológico clínico on-line para todo o Brasil, com base na Terapia Cognitivo-Comportamental (TCC). Especializações em Neuropsicologia e Psicologia em Saúde.",
   keywords: [
     "psicóloga",
     "psicologia clínica",

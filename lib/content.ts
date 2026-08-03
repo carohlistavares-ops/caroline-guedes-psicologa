@@ -8,7 +8,7 @@ export const site = {
   crp: "CRP 13/12977",
   whatsapp: "https://w.app/oyq5wa",
   email: "psicarolguedes@gmail.com",
-  cidade: "Campina Grande/PB · Atendimento presencial e on-line (todo o Brasil)"
+  cidade: "Campina Grande/PB · Atendimento on-line para todo o Brasil"
 };
 
 export const redesSociais = [
@@ -28,7 +28,7 @@ export const hero = {
   eyebrow: "Psicologia clínica · TCC",
   titulo: "Um espaço ético e acolhedor para reconstruir a sua história",
   subtitulo:
-    "Atendimento clínico presencial e on-line, fundamentado em evidências científicas, para cuidar da sua saúde mental com respeito ao seu tempo.",
+    "Atendimento clínico on-line para todo o Brasil, fundamentado em evidências científicas, para cuidar da sua saúde mental com respeito ao seu tempo.",
   cta: "Agendar consulta"
 };
 
@@ -42,7 +42,7 @@ export const sobreMim = {
   destaques: [
     { rotulo: "Abordagem", valor: "Terapia Cognitivo-Comportamental" },
     { rotulo: "Especializações", valor: "Neuropsicologia · Psicologia em Saúde" },
-    { rotulo: "Modalidades", valor: "Presencial e on-line" }
+    { rotulo: "Modalidades", valor: "On-line · todo o Brasil" }
   ]
 };
 
@@ -73,7 +73,7 @@ export const trajetoria = {
     }
   ],
   fechamento:
-    "Atualmente, atuo com atendimento clínico nas modalidades presencial e on-line, oferecendo um espaço ético, acolhedor e comprometido com o bem-estar e o desenvolvimento de cada paciente."
+    "Atualmente, atuo com atendimento clínico on-line para todo o Brasil, oferecendo um espaço ético, acolhedor e comprometido com o bem-estar e o desenvolvimento de cada paciente."
 };
 
 export const curso = {
@@ -81,7 +81,7 @@ export const curso = {
   subtitulo: "Do apego emocional à reconstrução da sua autonomia",
   texto:
     "Criado para auxiliar mulheres, de forma prática, acolhedora e baseada em evidências, a enfrentarem o apego emocional e reconstruírem sua autonomia e identidade.",
-  linkExterno: "https://psicarolguedes.hotmart.host/pagina-de-vendas-edcfeaab-223b-4138-8e3c-00049cbb0b8f",
+  linkExterno: "https://mulher-livre.netlify.app/",
   cta: "Conhecer o curso"
 };
 
@@ -89,5 +89,5 @@ export const agendamento = {
   titulo: "Agende sua consulta",
   subtitulo:
     "Preencha o formulário abaixo ou fale diretamente pelo WhatsApp. Retorno em até 1 dia útil.",
-  modalidades: ["Presencial", "On-line"]
+  modalidades: ["On-line"]
 };

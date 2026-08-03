@@ -7,7 +7,7 @@ const AgendamentoSchema = z.object({
   nome: z.string().trim().min(2, "Informe seu nome completo."),
   telefone: z.string().trim().min(8, "Informe um telefone válido."),
   email: z.string().trim().email("Informe um e-mail válido."),
-  modalidade: z.enum(["Presencial", "On-line"]),
+  modalidade: z.enum(["On-line"]),
   mensagem: z.string().trim().max(2000).optional()
 });
 
