@@ -8,7 +8,7 @@ export const site = {
   crp: "CRP 13/12977",
   whatsapp: "https://w.app/oyq5wa",
   email: "psicarolguedes@gmail.com",
-  cidade: "Campina Grande/PB · Atendimento on-line para todo o Brasil"
+  cidade: "Atendimento on-line para todo o Brasil"
 };
 
 export const redesSociais = [
