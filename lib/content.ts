@@ -8,7 +8,12 @@ export const site = {
   crp: "CRP 13/12977",
   whatsapp: "https://w.app/oyq5wa",
   email: "psicarolguedes@gmail.com",
-  cidade: "Atendimento on-line para todo o Brasil"
+  cidade: "Atendimento on-line para todo o Brasil",
+  desenvolvidoPor: {
+    texto: "Desenvolvido por",
+    autor: "@FelipeAlves",
+    url: "https://www.instagram.com/felluz_?igsh=MWJreDJlNWR4ZWJzdw%3D%3D&utm_source=qr"
+  }
 };
 
 export const redesSociais = [
