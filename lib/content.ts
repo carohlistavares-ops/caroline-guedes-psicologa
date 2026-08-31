@@ -6,7 +6,7 @@ export const site = {
   nome: "Caroline Guedes",
   titulo: "Psicóloga Clínica",
   crp: "CRP 13/12977",
-  whatsapp: "https://w.app/oyq5wa",
+  whatsapp: "https://wa.me/83991421977",
   email: "psicarolguedes@gmail.com",
   cidade: "Atendimento on-line para todo o Brasil",
   desenvolvidoPor: {
@@ -24,7 +24,7 @@ export const redesSociais = [
   },
   {
     nome: "WhatsApp",
-    url: "https://w.app/oyq5wa",
+    url: "https://wa.me/83991421977",
     usuario: "Fale diretamente"
   }
 ];
