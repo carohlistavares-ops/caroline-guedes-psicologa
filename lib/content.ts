@@ -11,8 +11,8 @@ export const site = {
   cidade: "Atendimento on-line para todo o Brasil",
   desenvolvidoPor: {
     texto: "Desenvolvido por",
-    autor: "@FelipeAlves",
-    url: "https://www.instagram.com/felluz_?igsh=MWJreDJlNWR4ZWJzdw%3D%3D&utm_source=qr"
+    autor: "Felluz",
+    url: "https://felluzstudio.com.br/"
   }
 };
 
