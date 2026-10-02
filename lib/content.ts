@@ -69,10 +69,17 @@ export const redesSociais = {
     // O WhatsApp não entra aqui: ele já está nos botões do agendamento.
     {
       nome: "Instagram",
+      icone: "instagram",
       url: "https://www.instagram.com/carolineg.psi/",
       usuario: "@carolineg.psi"
+    },
+    {
+      nome: "E-mail",
+      icone: "email",
+      url: `mailto:${site.email}`,
+      usuario: site.email
     }
-  ]
+  ] as const
 };
 
 export const hero = {

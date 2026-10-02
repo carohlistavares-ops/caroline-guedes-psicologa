@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center gap-4">
           <a
             href="#agendar"
-            className="rounded-sm bg-wine text-card px-6 py-3.5 text-sm font-medium hover:bg-wine-dark transition-colors"
+            className="rounded-sm bg-brand text-card px-6 py-3.5 text-sm font-medium hover:bg-brand-dark transition-colors"
           >
             {hero.cta}
           </a>

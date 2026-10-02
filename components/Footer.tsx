@@ -10,12 +10,7 @@ export default function Footer() {
           </p>
           <p>{rodape.frase}</p>
         </div>
-        <p>
-          <a href={`mailto:${site.email}`} className="hover:text-brand transition-colors">
-            {site.email}
-          </a>
-        </p>
-        <p className="border-t border-ink/10 pt-4 flex items-center gap-1">
+        <p className="border-t border-ink/10 pt-4 text-center">
           {site.desenvolvidoPor.texto}{" "}
           <a
             href={site.desenvolvidoPor.url}

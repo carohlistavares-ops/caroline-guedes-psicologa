@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <a
             href="#agendar"
-            className="whitespace-nowrap rounded-sm bg-wine text-card px-4 py-2 text-sm font-medium hover:bg-wine-dark transition-colors"
+            className="whitespace-nowrap rounded-sm bg-brand text-card px-4 py-2 text-sm font-medium hover:bg-brand-dark transition-colors"
           >
             <span className="sm:hidden">{navegacao.ctaCurto}</span>
             <span className="hidden sm:inline">{navegacao.cta}</span>
