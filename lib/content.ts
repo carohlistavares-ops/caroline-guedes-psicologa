@@ -166,7 +166,19 @@ export const agendamento = {
   titulo: "Agende sua consulta",
   subtitulo:
     "Preencha o formulário ou fale diretamente pelo WhatsApp. Há vagas com valor social: pergunte sobre a disponibilidade. Retorno em até 1 dia útil.",
-  whatsappCta: "Falar direto no WhatsApp",
+  // Botões de WhatsApp com mensagem pronta, para a Caroline saber de cara
+  // qual é o interesse. Sem valores em reais (Código de Ética, art. 20).
+  whatsapp: {
+    valorSocial: {
+      label: "Quero uma vaga de valor social",
+      mensagem:
+        "Olá, Caroline! Vim pelo site e gostaria de saber sobre a disponibilidade de vagas de atendimento com valor social."
+    },
+    valorIntegral: {
+      label: "Agendar com valor integral",
+      mensagem: "Olá, Caroline! Vim pelo site e gostaria de agendar uma consulta com valor integral."
+    }
+  },
   modalidades: ["On-line"],
   campos: {
     nome: "Nome",

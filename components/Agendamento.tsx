@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { agendamento, site } from "@/lib/content";
+import { agendamento } from "@/lib/content";
+import { linkWhatsapp } from "@/lib/whatsapp";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -59,14 +60,24 @@ export default function Agendamento() {
           <h2 className="text-3xl md:text-4xl mb-4">{agendamento.titulo}</h2>
           <p className="text-ink/75 max-w-sm mb-8">{agendamento.subtitulo}</p>
 
-          <a
-            href={site.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-sm border border-brand text-brand px-5 py-3 text-sm font-medium hover:bg-brand hover:text-card transition-colors"
-          >
-            {agendamento.whatsappCta} ↗
-          </a>
+          <div className="flex flex-col items-start gap-3">
+            <a
+              href={linkWhatsapp(agendamento.whatsapp.valorSocial.mensagem)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-sm border border-brand bg-brand text-card px-5 py-3 text-sm font-medium hover:bg-brand-dark hover:border-brand-dark transition-colors"
+            >
+              {agendamento.whatsapp.valorSocial.label} ↗
+            </a>
+            <a
+              href={linkWhatsapp(agendamento.whatsapp.valorIntegral.mensagem)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-sm border border-brand text-brand px-5 py-3 text-sm font-medium hover:bg-brand hover:text-card transition-colors"
+            >
+              {agendamento.whatsapp.valorIntegral.label} ↗
+            </a>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="bg-card border border-ink/10 rounded-lg p-6 md:p-8 space-y-5">
