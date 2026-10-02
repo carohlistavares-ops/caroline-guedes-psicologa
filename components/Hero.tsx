@@ -4,12 +4,12 @@ import HeroVideo from "./HeroVideo";
 
 export default function Hero() {
   return (
-    <section id="top" className="container-content pt-14 md:pt-20 pb-20 grid md:grid-cols-2 gap-12 items-center">
+    <section id="top" className="container-content pt-14 md:pt-20 pb-20 grid md:grid-cols-[1.25fr_1fr] gap-12 lg:gap-16 items-center">
       <div>
         <h1 className="text-[2.6rem] md:text-[3.6rem] leading-[1.04] mb-6">
           {hero.titulo}
         </h1>
-        <p className="text-lg text-ink/75 max-w-md mb-8">{hero.subtitulo}</p>
+        <p className="text-lg text-ink/75 max-w-lg mb-8">{hero.subtitulo}</p>
 
         <div className="flex flex-wrap items-center gap-4">
           <a
@@ -20,8 +20,6 @@ export default function Hero() {
           </a>
           <span className="text-xs font-semibold tracking-[0.08em] tabular-nums text-ink/70">{site.crp}</span>
         </div>
-
-        <p className="mt-6 text-sm text-ink/70">{site.cidade}</p>
       </div>
 
       <div className="relative">
@@ -31,7 +29,7 @@ export default function Hero() {
             src={hero.midia.poster}
             alt={hero.midia.alt}
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
+            sizes="(min-width: 768px) 45vw, 100vw"
             className="object-cover"
             priority
           />
