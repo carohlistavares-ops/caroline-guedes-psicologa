@@ -1,103 +1,59 @@
 # Site — Caroline Guedes, Psicóloga Clínica
 
-Site institucional completo (front-end + back-end) para Caroline Guedes,
-psicóloga clínica (CRP 13/12977). Feito em **Next.js 14 + TypeScript +
-Tailwind CSS**, com uma rota de API própria para o formulário de agendamento.
+Site institucional de Caroline Guedes, psicóloga clínica (CRP 13/12977),
+publicado em **https://www.psicarolineguedes.com.br**. Feito em
+**Next.js 14 + TypeScript + Tailwind CSS**, hospedado na Vercel.
 
 ## O que tem aqui
 
-- **Sobre mim** — apresentação profissional e abordagem (TCC)
-- **Trajetória** — linha do tempo com a história profissional
-- **Curso Mulher Livre** — seção de apresentação com link para a plataforma de venda
-- **Agende sua consulta** — formulário que envia por e-mail (rota `/api/agendar`) + botão direto de WhatsApp
-- **Redes sociais** — cards para Instagram, WhatsApp e LinkedIn
-- Pasta **`/public/midias`** pronta para receber as imagens, já separada em subpastas:
-  - `midias/hero` — foto de perfil / imagem principal
-  - `midias/sobre` — fotos do consultório, atendimento etc.
-  - `midias/trajetoria` — fotos de palestras, certificados etc.
-  - `midias/curso` — capa/arte do curso Mulher Livre
-  - `midias/redes` — ícones ou imagens para redes sociais
-  - `midias/geral` — qualquer outra imagem
+- **Hero** — apresentação, com suporte a vídeo (a foto é o fallback)
+- **Sobre mim** — abordagem (TCC), especializações e vagas de valor social
+- **Trajetória** — linha do tempo da história profissional
+- **Curso Mulher Livre** — apresentação com link para a página de venda
+- **Agende sua consulta** — dois botões de WhatsApp com mensagem pronta
+  (valor social / valor integral) + imagem da seção
+- **Redes sociais** — Instagram e WhatsApp
+- **SEO** — metadados, canonical, `robots.txt`, `sitemap.xml`, Open Graph,
+  dados estruturados (JSON-LD), favicon e ícone para iPhone
 
-## Trabalhando com o Opencode
+## Rodando localmente
 
-Este projeto tem um arquivo **`AGENTS.md`** na raiz com os padrões de
-código já adotados (onde fica o texto, como nomear pastas de imagem,
-como criar um novo formulário etc.). O Opencode lê esse arquivo
-automaticamente ao abrir a pasta, então qualquer pedido de alteração
-("adicione uma seção de depoimentos", "crie um novo formulário de
-contato") vai seguir o mesmo padrão do resto do site sem precisar
-reexplicar isso na conversa.
-
-## Como rodar no VS Code (com o Opencode)
-
-1. Abra esta pasta no VS Code.
-2. No terminal integrado, instale as dependências:
-   ```bash
-   npm install
-   ```
-3. (Opcional, mas recomendado) Configure o envio de e-mail do formulário:
-   ```bash
-   cp .env.example .env.local
-   ```
-   e preencha `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS` e `DESTINO_EMAIL` com os
-   dados do e-mail que vai receber os pedidos de consulta. Sem isso, o
-   formulário continua funcionando, só que o pedido fica registrado apenas
-   no log do servidor (bom para testar).
-4. Rode o site em modo desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-5. Acesse **http://localhost:3000** no navegador.
-
-## O que editar antes de publicar
-
-Praticamente todo o texto do site está centralizado em **`lib/content.ts`**
-— não precisa mexer nos componentes para trocar uma frase. Nesse arquivo,
-procure por `TODO` para encontrar os pontos que precisam da informação real
-da Caroline:
-
-- `site.whatsapp` — número de WhatsApp (formato `55DDDNUMERO`, só números)
-- `site.email` — e-mail de contato
-- `redesSociais` — links reais do Instagram e LinkedIn
-- `curso.linkExterno` — link real da plataforma de venda do curso (Hotmart, Eduzz etc.)
-
-## Adicionando as imagens
-
-Basta colocar os arquivos dentro da subpasta correspondente em
-`public/midias/...` e trocar os blocos marcados com comentários
-`{/* Coloque a imagem aqui */}` dentro de `components/Hero.tsx` e
-`components/Curso.tsx` por um componente `<Image />` do Next.js, por exemplo:
-
-```tsx
-import Image from "next/image";
-
-<Image
-  src="/midias/hero/caroline.jpg"
-  alt="Caroline Guedes, psicóloga clínica"
-  fill
-  className="object-cover"
-/>
+```bash
+npm install
+npm run dev
 ```
 
-## Publicando o site
+Acesse **http://localhost:3000**. Não há variáveis de ambiente obrigatórias.
 
-O jeito mais simples é publicar na **Vercel** (criadora do Next.js):
+## Editando o site
 
-1. Suba este projeto para um repositório no GitHub.
-2. Crie uma conta em vercel.com e importe o repositório.
-3. Adicione as mesmas variáveis de ambiente do `.env.local` no painel da Vercel.
-4. Pronto — a Vercel gera a URL pública automaticamente a cada atualização.
+- **Textos:** todos ficam em `lib/content.ts` — não é preciso mexer nos
+  componentes para trocar uma frase. Procure por `TODO` para ver o que
+  ainda depende de arquivo/informação da Caroline.
+- **Imagens:** ficam em `public/midias/<secao>/`. Os caminhos usados pelo
+  site estão em `lib/content.ts`.
+- **Cores:** definidas uma única vez em `lib/cores.ts`.
+- **Divulgação:** pelo Código de Ética do Psicólogo (art. 20), nunca usar
+  preço como propaganda — nada de valores em reais, "barato" ou promoções.
+
+Os padrões de código do projeto estão documentados em **`AGENTS.md`**
+(lido automaticamente por agentes de IA como Opencode e Claude Code).
+
+## Publicando
+
+Todo push na branch `main` gera um deploy automático na Vercel.
 
 ## Estrutura do projeto
 
 ```
 app/
-  layout.tsx        → fontes, metadata (SEO)
-  page.tsx           → monta as seções da home
-  api/agendar/        → rota de back-end do formulário de consulta
-  globals.css         → estilos globais e tokens de design
-components/           → cada seção do site é um componente
-lib/content.ts         → TODO o texto do site, centralizado
-public/midias/          → pasta de imagens (subdividida por seção)
+  layout.tsx          → fontes, metadados (SEO) e dados estruturados
+  page.tsx            → monta as seções da home, em ordem
+  robots.ts, sitemap.ts, icon.tsx, apple-icon.tsx → gerados pelo Next
+  globals.css         → estilos globais
+components/           → um componente por seção do site
+lib/content.ts        → TODO o texto do site, centralizado
+lib/cores.ts          → paleta de cores (fonte única)
+lib/whatsapp.ts       → monta links do WhatsApp com mensagem pronta
+public/midias/        → imagens, subdivididas por seção
 ```

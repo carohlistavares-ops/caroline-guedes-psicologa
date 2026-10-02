@@ -8,9 +8,9 @@ código — sem precisar reexplicar isso a cada conversa.
 ## Visão geral do projeto
 
 Site institucional de Caroline Guedes (psicóloga clínica, CRP 13/12977).
-Stack: **Next.js 14 (App Router) + TypeScript + Tailwind CSS**, com uma
-rota de API própria (`app/api/agendar/route.ts`) como back-end do
-formulário de agendamento.
+Stack: **Next.js 14 (App Router) + TypeScript + Tailwind CSS**. Site
+estático, sem back-end: o contato é feito por botões de WhatsApp com
+mensagem pronta (`lib/whatsapp.ts`).
 
 ## Padrão 1 — Conteúdo de texto centralizado em `lib/content.ts`
 
@@ -37,7 +37,7 @@ precisa ser trocado antes de publicar.
 
 Imagens ficam em `public/midias/<secao>/`, nunca soltas na raiz de
 `public/`. Subpastas já existentes: `hero`, `sobre`, `trajetoria`,
-`curso`, `redes`, `geral`. Se uma nova seção do site precisar de imagem,
+`curso`, `agendamento`, `compartilhamento`, `redes`, `geral`. Se uma nova seção do site precisar de imagem,
 crie uma nova subpasta com o nome da seção em vez de reaproveitar
 `geral`. Sempre usar o componente `next/image` (`import Image from
 "next/image"`) para renderizar essas imagens, nunca `<img>` puro.
@@ -70,20 +70,21 @@ nome semântico (nunca `#hex` direto no componente). Arquivos que não passam
 pelo Tailwind (ícone, imagem de compartilhamento) importam `cores` direto.
 Em SVG, prefira `stroke="currentColor"` + uma classe de cor.
 
-## Padrão 6 — Formulários client-side chamando rotas de API própria
+## Padrão 6 — Formulários (se voltarem a existir)
 
-O padrão do formulário de agendamento (`components/Agendamento.tsx` +
-`app/api/agendar/route.ts`) é o modelo para qualquer novo formulário:
+Hoje o site não tem formulário: o antigo formulário de agendamento (com
+envio de e-mail via SMTP) foi removido em favor dos botões de WhatsApp e
+pode ser recuperado no histórico do git (commit `0163208`). Se um novo
+formulário for criado, siga o modelo daquele:
 
 1. Componente client (`"use client"`) com `useState` para status
    (`idle` / `loading` / `success` / `error`).
 2. `fetch` para uma rota própria em `app/api/<nome>/route.ts`.
-3. A rota de API valida o corpo da requisição com **zod** antes de
-   processar (nunca confiar em dados do client sem validar).
-4. Se variáveis de ambiente de terceiros (SMTP, etc.) não estiverem
-   configuradas, a rota deve degradar graciosamente (registrar em log)
-   em vez de quebrar — assim o site funciona em desenvolvimento antes de
-   qualquer configuração externa ser feita.
+3. A rota valida o corpo com **zod** antes de processar e tem antispam
+   (honeypot, tempo mínimo de envio e limite por IP).
+4. Se variáveis de ambiente de terceiros (SMTP etc.) não estiverem
+   configuradas, a rota degrada graciosamente (registra em log) em vez
+   de quebrar.
 
 ## Padrão 7 — Idioma e tom
 

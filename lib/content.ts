@@ -33,8 +33,8 @@ export const seo = {
   // Imagem de compartilhamento (WhatsApp, Instagram etc.), 1200x630 e leve
   // (< 300 KB, senão o WhatsApp pode não exibir a prévia). Se mudar o título
   // ou a foto do hero, refaça esta arte também.
-  imagem: "/midias/compartilhamento/caroline-guedes-psicologa-valor-social.jpg",
-  imagemAlt: "Caroline Guedes, psicóloga on-line com vagas de valor social",
+  imagem: "/midias/compartilhamento/caroline-guedes-psicologa.jpg",
+  imagemAlt: "Caroline Guedes, psicóloga clínica com atendimento on-line",
   servicos: [
     "Psicoterapia on-line",
     "Atendimento psicológico com valor social",
@@ -80,10 +80,10 @@ export const redesSociais = {
 };
 
 export const hero = {
-  eyebrow: "Psicologia clínica · TCC · Valor social",
-  titulo: "Psicóloga on-line com vagas de valor social",
+  eyebrow: "Psicologia clínica · TCC",
+  titulo: "Um espaço ético e acolhedor para reconstruir a sua história",
   subtitulo:
-    "Um espaço ético e acolhedor para reconstruir a sua história. Atendimento clínico on-line para todo o Brasil, com Terapia Cognitivo-Comportamental e respeito ao seu tempo.",
+    "Atendimento clínico on-line para todo o Brasil, fundamentado em evidências científicas, para cuidar da sua saúde mental com respeito ao seu tempo.",
   cta: "Agendar consulta",
   midia: {
     // TODO: colocar o vídeo do hero em public/midias/hero/ com estes nomes.
@@ -113,8 +113,7 @@ export const sobreMim = {
   destaques: [
     { rotulo: "Abordagem", valor: "Terapia Cognitivo-Comportamental" },
     { rotulo: "Especializações", valor: "Neuropsicologia · Psicologia em Saúde" },
-    { rotulo: "Modalidades", valor: "On-line · todo o Brasil" },
-    { rotulo: "Valor social", valor: "Vagas disponíveis · consulte" }
+    { rotulo: "Modalidades", valor: "On-line · todo o Brasil" }
   ]
 };
 
@@ -146,7 +145,7 @@ export const trajetoria = {
     }
   ],
   fechamento:
-    "Atualmente, atuo com atendimento clínico on-line para todo o Brasil, com vagas de valor social, oferecendo um espaço ético, acolhedor e comprometido com o bem-estar e o desenvolvimento de cada paciente."
+    "Atualmente, atuo com atendimento clínico on-line para todo o Brasil, oferecendo um espaço ético, acolhedor e comprometido com o bem-estar e o desenvolvimento de cada paciente."
 };
 
 export const curso = {
@@ -165,7 +164,7 @@ export const agendamento = {
   eyebrow: "Dê o primeiro passo",
   titulo: "Agende sua consulta",
   subtitulo:
-    "Preencha o formulário ou fale diretamente pelo WhatsApp. Há vagas com valor social: pergunte sobre a disponibilidade. Retorno em até 1 dia útil.",
+    "Fale diretamente comigo pelo WhatsApp. Há vagas com valor social: escolha a opção abaixo. Retorno em até 1 dia útil.",
   // Botões de WhatsApp com mensagem pronta, para a Caroline saber de cara
   // qual é o interesse. Sem valores em reais (Código de Ética, art. 20).
   whatsapp: {
@@ -179,22 +178,12 @@ export const agendamento = {
       mensagem: "Olá, Caroline! Vim pelo site e gostaria de agendar uma consulta com valor integral."
     }
   },
-  modalidades: ["On-line"],
-  campos: {
-    nome: "Nome",
-    telefone: "Telefone / WhatsApp",
-    email: "E-mail",
-    modalidade: "Modalidade",
-    valorSocial: "Tenho interesse em uma vaga de valor social",
-    mensagem: "Como posso te ajudar?",
-    mensagemPlaceholder: "Conte brevemente o que te trouxe até aqui (opcional)."
-  },
-  enviar: "Enviar pedido de consulta",
-  enviando: "Enviando...",
-  sucesso: "Recebido! Caroline vai te responder em até 1 dia útil.",
-  erroPadrao: "Não foi possível enviar. Tente novamente.",
-  privacidade:
-    "Seus dados são usados apenas para retornar o seu contato e não são compartilhados com terceiros, conforme a LGPD e o sigilo profissional."
+  // TODO: salvar o banner da seção neste caminho: imagem horizontal larga
+  // (ex: 1536x1024 ou maior), JPG com até ~400 KB. Ela ocupa a largura toda
+  // da tela, com o cartão de texto por cima, do lado esquerdo. Enquanto o
+  // arquivo não existir, o banner usa o verde-escuro da marca.
+  banner: "/midias/agendamento/banner-agendamento.jpg",
+  bannerAlt: "Ambiente acolhedor para atendimento psicológico on-line com Caroline Guedes"
 };
 
 export const rodape = {
