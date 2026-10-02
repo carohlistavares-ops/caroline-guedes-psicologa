@@ -5,7 +5,7 @@ import { agendamento } from "@/lib/content";
 import { linkWhatsapp } from "@/lib/whatsapp";
 
 // Banner de ponta a ponta. Se a imagem ainda não existir em /public, o
-// banner usa só o verde-escuro da marca (verificado no build, já que este
+// banner usa só o tom escuro da marca (verificado no build, já que este
 // é um componente de servidor).
 const temImagem = existsSync(join(process.cwd(), "public", agendamento.banner));
 

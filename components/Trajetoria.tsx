@@ -7,7 +7,7 @@ export default function Trajetoria() {
       <div className="container-content">
         <p className="eyebrow text-ochre mb-3">{trajetoria.eyebrow}</p>
         <h2 className="text-3xl md:text-4xl mb-4 text-paper">{trajetoria.titulo}</h2>
-        <p className="text-paper/70 max-w-2xl mb-14">{trajetoria.intro}</p>
+        <p className="text-paper/80 max-w-2xl mb-14">{trajetoria.intro}</p>
 
         <div className="relative pl-12 md:pl-0">
           <ThreadLine />
@@ -27,7 +27,7 @@ export default function Trajetoria() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-xl mt-1 mb-2 text-paper">{item.titulo}</h3>
-                  <p className="text-paper/70 leading-relaxed">{item.texto}</p>
+                  <p className="text-paper/80 leading-relaxed">{item.texto}</p>
                 </div>
               </li>
             ))}

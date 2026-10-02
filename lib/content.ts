@@ -66,15 +66,11 @@ export const redesSociais = {
   eyebrow: "Vamos continuar em contato",
   titulo: "Redes sociais",
   links: [
+    // O WhatsApp não entra aqui: ele já está nos botões do agendamento.
     {
       nome: "Instagram",
       url: "https://www.instagram.com/carolineg.psi/",
       usuario: "@carolineg.psi"
-    },
-    {
-      nome: "WhatsApp",
-      url: site.whatsapp,
-      usuario: "Fale diretamente"
     }
   ]
 };
@@ -181,7 +177,7 @@ export const agendamento = {
   // TODO: salvar o banner da seção neste caminho: imagem horizontal larga
   // (ex: 1536x1024 ou maior), JPG com até ~400 KB. Ela ocupa a largura toda
   // da tela, com o cartão de texto por cima, do lado esquerdo. Enquanto o
-  // arquivo não existir, o banner usa o verde-escuro da marca.
+  // arquivo não existir, o banner usa o tom escuro da marca (brand-dark).
   banner: "/midias/agendamento/banner-agendamento.jpg",
   bannerAlt: "Ambiente acolhedor para atendimento psicológico on-line com Caroline Guedes"
 };

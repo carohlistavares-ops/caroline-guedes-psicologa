@@ -17,7 +17,7 @@ export default function ThreadLine() {
 
   return (
     <div ref={ref} className="absolute left-[18px] md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2">
-      <svg width="2" height="100%" className="h-full overflow-visible text-brand" aria-hidden="true">
+      <svg width="2" height="100%" className="h-full overflow-visible text-ochre/50" aria-hidden="true">
         <motion.line
           x1="1"
           y1="0"

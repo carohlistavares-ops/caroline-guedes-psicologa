@@ -3,7 +3,7 @@ import { rodape, site } from "@/lib/content";
 export default function Footer() {
   return (
     <footer className="border-t border-ink/10 py-10">
-      <div className="container-content flex flex-col gap-4 text-sm text-ink/55">
+      <div className="container-content flex flex-col gap-4 text-sm text-ink/70">
         <div className="flex flex-col sm:flex-row justify-between gap-2">
           <p>
             © {new Date().getFullYear()} {site.nome} · {site.titulo} · {site.crp}

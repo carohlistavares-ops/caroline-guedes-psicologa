@@ -25,7 +25,11 @@
   .container-content {
     @apply max-w-content mx-auto px-6 md:px-10;
   }
+}
 
+/* Em "components" (e não em "utilities") para que classes como
+   `text-ochre` possam trocar a cor do eyebrow em seções escuras. */
+@layer components {
   .eyebrow {
     @apply font-mono text-xs tracking-[0.18em] uppercase text-wine;
   }

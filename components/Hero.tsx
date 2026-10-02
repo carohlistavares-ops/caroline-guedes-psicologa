@@ -19,10 +19,10 @@ export default function Hero() {
           >
             {hero.cta}
           </a>
-          <span className="font-mono text-xs text-ink/60">{site.crp}</span>
+          <span className="font-mono text-xs text-ink/70">{site.crp}</span>
         </div>
 
-        <p className="mt-6 text-sm text-ink/60">{site.cidade}</p>
+        <p className="mt-6 text-sm text-ink/70">{site.cidade}</p>
       </div>
 
       <div className="relative">

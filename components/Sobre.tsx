@@ -11,7 +11,7 @@ export default function Sobre() {
           <dl className="space-y-5">
             {sobreMim.destaques.map((d) => (
               <div key={d.rotulo} className="border-l-2 border-brand/40 pl-4">
-                <dt className="font-mono text-[11px] uppercase tracking-wide text-ink/50">
+                <dt className="font-mono text-[11px] uppercase tracking-wide text-ink/70">
                   {d.rotulo}
                 </dt>
                 <dd className="text-ink/85">{d.valor}</dd>
