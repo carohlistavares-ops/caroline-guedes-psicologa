@@ -1,4 +1,4 @@
-import { site } from "@/lib/content";
+import { rodape, site } from "@/lib/content";
 
 export default function Footer() {
   return (
@@ -8,8 +8,13 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {site.nome} · {site.titulo} · {site.crp}
           </p>
-          <p>Atendimento ético, acolhedor e baseado em evidências científicas.</p>
+          <p>{rodape.frase}</p>
         </div>
+        <p>
+          <a href={`mailto:${site.email}`} className="hover:text-brand transition-colors">
+            {site.email}
+          </a>
+        </p>
         <p className="border-t border-ink/10 pt-4 flex items-center gap-1">
           {site.desenvolvidoPor.texto}{" "}
           <a

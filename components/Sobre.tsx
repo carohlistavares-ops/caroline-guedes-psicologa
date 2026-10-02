@@ -5,7 +5,7 @@ export default function Sobre() {
     <section id="sobre" className="container-content py-20 border-t border-ink/10">
       <div className="grid md:grid-cols-[1fr_1.4fr] gap-12">
         <div>
-          <p className="eyebrow mb-3">Quem cuida de você</p>
+          <p className="eyebrow mb-3">{sobreMim.eyebrow}</p>
           <h2 className="text-3xl md:text-4xl mb-6">{sobreMim.titulo}</h2>
 
           <dl className="space-y-5">

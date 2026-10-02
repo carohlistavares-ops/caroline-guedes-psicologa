@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Work_Sans, IBM_Plex_Mono } from "next/font/google";
+import DadosEstruturados from "@/components/DadosEstruturados";
+import { seo, site } from "@/lib/content";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -25,17 +27,28 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Caroline Guedes | Psicóloga Clínica — CRP 13/12977",
-  description:
-    "Atendimento psicológico clínico on-line para todo o Brasil, com base na Terapia Cognitivo-Comportamental (TCC). Especializações em Neuropsicologia e Psicologia em Saúde.",
-  keywords: [
-    "psicóloga",
-    "psicologia clínica",
-    "TCC",
-    "terapia cognitivo-comportamental",
-    "Caroline Guedes",
-    "Mulher Livre"
-  ]
+  // Base para URLs absolutas e canonical: evita que o endereço *.vercel.app
+  // seja indexado como conteúdo duplicado do domínio oficial.
+  metadataBase: new URL(site.url),
+  title: seo.titulo,
+  description: seo.descricao,
+  alternates: { canonical: "/" },
+  authors: [{ name: site.nome, url: site.url }],
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "/",
+    siteName: site.nome,
+    title: seo.titulo,
+    description: seo.descricao,
+    images: [{ url: seo.imagem, width: 1200, height: 630, alt: seo.imagemAlt }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.titulo,
+    description: seo.descricao,
+    images: [seo.imagem]
+  }
 };
 
 export default function RootLayout({
@@ -45,7 +58,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${fraunces.variable} ${workSans.variable} ${plexMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <DadosEstruturados />
+        {children}
+      </body>
     </html>
   );
 }

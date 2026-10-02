@@ -26,9 +26,9 @@ renderizam esses objetos.
 
 ## Padrão 2 — Marcadores `// TODO:` para dados reais pendentes
 
-Campos que dependem de informação real da cliente (número de WhatsApp,
-e-mail, links de redes sociais, link de venda do curso) estão marcados
-com comentários `// TODO: ...` em `lib/content.ts`. Ao adicionar um novo
+Campos que dependem de informação ou arquivo real da cliente (hoje: o
+vídeo do hero) ficam marcados com comentários `// TODO: ...` em
+`lib/content.ts`. Ao adicionar um novo
 campo desse tipo (ex: um novo link externo, um novo contato), siga o
 mesmo padrão: valor de exemplo + comentário `// TODO:` explicando o que
 precisa ser trocado antes de publicar.
@@ -52,7 +52,7 @@ seção usa `id="..."` (kebab-case, em português: `#sobre`, `#trajetoria`,
 `#curso`, `#agendar`, `#redes`) para permitir navegação por âncora a
 partir do `Header`.
 
-## Padrão 5 — Identidade visual (tokens em `tailwind.config.ts`)
+## Padrão 5 — Identidade visual (tokens em `lib/cores.ts` + `tailwind.config.ts`)
 
 Não usar cores ou fontes soltas (hex direto no JSX). Sempre usar as
 classes de tema já definidas:
@@ -64,8 +64,11 @@ classes de tema já definidas:
 - Utilitário `.container-content` para o max-width padrão das seções, e
   `.eyebrow` para os pequenos rótulos acima dos títulos.
 
-Se for necessário um novo tom de cor, adicione-o ao `tailwind.config.ts`
-com um nome semântico (nunca `#hex` direto no componente).
+As cores são definidas uma única vez em `lib/cores.ts` (o Tailwind importa
+de lá). Se for necessário um novo tom, adicione-o em `lib/cores.ts` com um
+nome semântico (nunca `#hex` direto no componente). Arquivos que não passam
+pelo Tailwind (ícone, imagem de compartilhamento) importam `cores` direto.
+Em SVG, prefira `stroke="currentColor"` + uma classe de cor.
 
 ## Padrão 6 — Formulários client-side chamando rotas de API própria
 
@@ -87,6 +90,23 @@ O padrão do formulário de agendamento (`components/Agendamento.tsx` +
 Todo texto do site, nomes de variáveis de conteúdo, comentários e nomes
 de arquivos de componente relacionados ao domínio (não os técnicos) estão
 em português do Brasil. Manter esse padrão em qualquer texto novo.
+
+## Padrão 8 — SEO e ética na divulgação
+
+- Metadados (title, description, Open Graph) vêm do objeto `seo` em
+  `lib/content.ts`; `app/layout.tsx` só os consome. O `metadataBase` usa
+  `site.url` (domínio oficial) para gerar o canonical.
+- `app/robots.ts`, `app/sitemap.ts`, `app/icon.tsx` e `app/apple-icon.tsx`
+  são gerados pelo Next (ícones com `runtime = "edge"`: o runtime Node do
+  `@vercel/og` quebra no Windows com Next 14). A imagem de compartilhamento
+  é um JPG estático em `public/midias/compartilhamento/` (`seo.imagem`). Ao criar uma nova
+  página, adicione-a ao `sitemap.ts`.
+- Dados estruturados (JSON-LD) ficam em `components/DadosEstruturados.tsx`.
+- Termo de busca principal: **"valor social"** (psicóloga on-line com valor
+  social, TCC). **Código de Ética do Psicólogo, art. 20:** nunca usar o
+  preço como propaganda — nada de valores em reais, "barato", "promoção",
+  descontos ou comparação de preço, nem no texto, nem nos metadados, nem
+  no JSON-LD (sem `priceRange`).
 
 ## O que evitar
 

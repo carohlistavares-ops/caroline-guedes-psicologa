@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
+import { cores } from "./lib/cores";
 
-// Paleta pensada para o consultório da Caroline:
-// verde-mata (crescimento/segurança), vinho (coragem/força feminina — sem cair
-// no terracota genérico), papel amanteigado e ocre como toque quente pontual.
+// As cores vivem em lib/cores.ts (fonte única). Para um novo tom, adicione-o
+// lá com um nome semântico.
 const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",
@@ -11,22 +11,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        ink: "#1E2A22",
-        paper: "#EFEDE1",
-        card: "#FBFAF6",
-        brand: {
-          DEFAULT: "#3C5647",
-          light: "#5A7A67",
-          dark: "#243529"
-        },
-        wine: {
-          DEFAULT: "#8B3448",
-          light: "#A84F63",
-          dark: "#652435"
-        },
-        ochre: "#C79A56"
-      },
+      colors: cores,
       fontFamily: {
         display: ["var(--font-fraunces)", "serif"],
         body: ["var(--font-work-sans)", "sans-serif"],

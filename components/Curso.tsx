@@ -6,7 +6,7 @@ export default function Curso() {
     <section id="curso" className="container-content py-20 border-t border-ink/10">
       <div className="rounded-lg bg-card border border-ink/10 p-8 md:p-14 grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
         <div>
-          <p className="eyebrow mb-3">Formação para mulheres</p>
+          <p className="eyebrow mb-3">{curso.eyebrow}</p>
           <h2 className="text-3xl md:text-4xl mb-3">{curso.titulo}</h2>
           <p className="font-display italic text-brand text-lg mb-5">
             {curso.subtitulo}
@@ -25,9 +25,10 @@ export default function Curso() {
 
         <div className="relative aspect-square rounded-md bg-paper border border-ink/10 overflow-hidden">
           <Image
-            src="/midias/curso/photo_2026-07-30_21-51-34.jpg"
-            alt="Curso Mulher Livre"
+            src={curso.imagem}
+            alt={curso.imagemAlt}
             fill
+            sizes="(min-width: 768px) 45vw, 100vw"
             className="object-cover"
           />
         </div>

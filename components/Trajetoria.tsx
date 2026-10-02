@@ -5,12 +5,12 @@ export default function Trajetoria() {
   return (
     <section id="trajetoria" className="bg-brand-dark text-paper py-20">
       <div className="container-content">
-        <p className="eyebrow text-ochre mb-3">O caminho até aqui</p>
+        <p className="eyebrow text-ochre mb-3">{trajetoria.eyebrow}</p>
         <h2 className="text-3xl md:text-4xl mb-4 text-paper">{trajetoria.titulo}</h2>
         <p className="text-paper/70 max-w-2xl mb-14">{trajetoria.intro}</p>
 
         <div className="relative pl-12 md:pl-0">
-          <ThreadLine variant="trajetoria" />
+          <ThreadLine />
 
           <ol className="space-y-14">
             {trajetoria.linha.map((item, i) => (

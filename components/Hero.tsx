@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { hero, site } from "@/lib/content";
+import HeroVideo from "./HeroVideo";
 
 export default function Hero() {
   return (
@@ -26,13 +27,16 @@ export default function Hero() {
 
       <div className="relative">
         <div className="relative aspect-[4/5] rounded-lg bg-card border border-ink/10 overflow-hidden">
+          {/* Foto: poster/fallback do vídeo e imagem principal para SEO/LCP. */}
           <Image
-            src="/midias/hero/photo_2026-07-30_21-51-12.jpg"
-            alt="Caroline Guedes, psicóloga clínica"
+            src={hero.midia.poster}
+            alt={hero.midia.alt}
             fill
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
             priority
           />
+          <HeroVideo />
         </div>
       </div>
     </section>
