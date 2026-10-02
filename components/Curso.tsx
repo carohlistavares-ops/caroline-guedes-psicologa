@@ -1,4 +1,4 @@
-import Image from "next/image";
+import VideoApresentacao from "./VideoApresentacao";
 import { curso } from "@/lib/content";
 
 export default function Curso() {
@@ -22,13 +22,14 @@ export default function Curso() {
           </a>
         </div>
 
-        <div className="relative aspect-square rounded-md bg-paper border border-ink/10 overflow-hidden">
-          <Image
-            src={curso.imagem}
-            alt={curso.imagemAlt}
-            fill
-            sizes="(min-width: 768px) 45vw, 100vw"
-            className="object-cover"
+        <div className="relative aspect-[4/5] rounded-md bg-paper border border-ink/10 overflow-hidden">
+          <VideoApresentacao
+            id="curso"
+            src={curso.video.src}
+            capa={curso.video.capa}
+            alt={curso.video.alt}
+            rotuloOuvir={curso.video.ouvir}
+            sizes="(min-width: 768px) 40vw, 100vw"
           />
         </div>
       </div>

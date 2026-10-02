@@ -17,6 +17,10 @@ export const site = {
   telefone: "+55 83 99142-1977",
   email: "psicarolguedes@gmail.com",
   cidade: "Atendimento on-line para todo o Brasil",
+  // Foto profissional: usada nos dados estruturados (Google).
+  foto: "/midias/hero/photo_2026-07-30_21-51-12.jpg",
+  // Data de publicação dos vídeos (dados estruturados VideoObject).
+  videosPublicadosEm: "2026-10-02",
   desenvolvidoPor: {
     texto: "Desenvolvido por",
     autor: "Felluz",
@@ -70,8 +74,8 @@ export const redesSociais = {
     {
       nome: "Instagram",
       icone: "instagram",
-      url: "https://www.instagram.com/carolineg.psi/",
-      usuario: "@carolineg.psi"
+      url: "https://www.instagram.com/psi.carolguedes/",
+      usuario: "@psi.carolguedes"
     },
     {
       nome: "E-mail",
@@ -87,19 +91,16 @@ export const hero = {
   subtitulo:
     "Atendimento clínico on-line para todo o Brasil, fundamentado em evidências científicas, para cuidar da sua saúde mental com respeito ao seu tempo.",
   cta: "Agendar consulta",
-  midia: {
-    // TODO: colocar o vídeo do hero em public/midias/hero/ com estes nomes.
-    // Recomendado: 10–20 s em loop, sem áudio, proporção 4:5 (ex: 1080x1350),
-    // MP4 H.264 com até ~4 MB (e, opcionalmente, uma versão WebM menor).
-    // Enquanto o arquivo não existir, o site mostra a foto abaixo normalmente.
-    videoMp4: "/midias/hero/hero.mp4",
-    videoWebm: "/midias/hero/hero.webm",
-    // Foto exibida enquanto o vídeo carrega, se ele falhar ou se a pessoa
-    // preferir menos movimento (configuração de acessibilidade do aparelho).
-    poster: "/midias/hero/photo_2026-07-30_21-51-12.jpg",
-    alt: "Caroline Guedes, psicóloga clínica",
-    pausar: "Pausar vídeo",
-    reproduzir: "Reproduzir vídeo"
+  // Vídeo de apresentação (vertical 9:16, com fala). Toca sem som em loop
+  // como prévia; o botão "ouvir" recomeça do início com som.
+  video: {
+    src: "/midias/hero/apresentacao.mp4",
+    capa: "/midias/hero/apresentacao-capa.jpg",
+    alt: "Vídeo em que Caroline Guedes, psicóloga clínica, se apresenta",
+    ouvir: "Ouvir apresentação",
+    titulo: "Apresentação de Caroline Guedes, psicóloga clínica",
+    descricao: "Vídeo de apresentação de Caroline Guedes, psicóloga clínica (CRP 13/12977).",
+    duracao: "PT59S"
   }
 };
 
@@ -155,8 +156,15 @@ export const curso = {
     "Criado para auxiliar mulheres, de forma prática, acolhedora e baseada em evidências, a enfrentarem o apego emocional e reconstruírem sua autonomia e identidade.",
   linkExterno: "https://mulher-livre.netlify.app/",
   cta: "Conhecer o curso",
-  imagem: "/midias/curso/photo_2026-07-30_21-51-34.jpg",
-  imagemAlt: "Capa do curso Mulher Livre, de Caroline Guedes"
+  video: {
+    src: "/midias/curso/curso-mulher-livre.mp4",
+    capa: "/midias/curso/curso-mulher-livre-capa.jpg",
+    alt: "Vídeo em que Caroline Guedes apresenta o curso Mulher Livre",
+    ouvir: "Ouvir sobre o curso",
+    titulo: "Curso Mulher Livre, com Caroline Guedes",
+    descricao: "Caroline Guedes fala sobre o curso Mulher Livre.",
+    duracao: "PT1M9S"
+  }
 };
 
 export const agendamento = {
@@ -176,12 +184,17 @@ export const agendamento = {
       mensagem: "Olá, Caroline! Vim pelo site e gostaria de agendar uma consulta com valor integral."
     }
   },
-  // TODO: salvar o banner da seção neste caminho: imagem horizontal larga
-  // (ex: 1536x1024 ou maior), JPG com até ~400 KB. Ela ocupa a largura toda
-  // da tela, com o cartão de texto por cima, do lado esquerdo. Enquanto o
-  // arquivo não existir, o banner usa o tom escuro da marca (brand-dark).
+  // Banner da seção: imagem horizontal larga (ex: 1536x1024), JPG com até
+  // ~400 KB. Ocupa a largura toda da tela, com o cartão de texto por cima,
+  // do lado esquerdo. Sem o arquivo, o banner usa o tom brand-dark.
   banner: "/midias/agendamento/banner-agendamento.jpg",
   bannerAlt: "Ambiente acolhedor para atendimento psicológico on-line com Caroline Guedes"
+};
+
+// Textos do player de vídeo (hero e curso).
+export const videoPlayer = {
+  pausar: "Pausar prévia",
+  reproduzir: "Retomar prévia"
 };
 
 export const rodape = {

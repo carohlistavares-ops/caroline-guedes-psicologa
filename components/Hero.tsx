@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { hero, site } from "@/lib/content";
-import HeroVideo from "./HeroVideo";
+import VideoApresentacao from "./VideoApresentacao";
 
 export default function Hero() {
   return (
@@ -24,16 +23,15 @@ export default function Hero() {
 
       <div className="relative">
         <div className="relative aspect-[4/5] rounded-lg bg-card border border-ink/10 overflow-hidden">
-          {/* Foto: poster/fallback do vídeo e imagem principal para SEO/LCP. */}
-          <Image
-            src={hero.midia.poster}
-            alt={hero.midia.alt}
-            fill
+          <VideoApresentacao
+            id="hero"
+            src={hero.video.src}
+            capa={hero.video.capa}
+            alt={hero.video.alt}
+            rotuloOuvir={hero.video.ouvir}
             sizes="(min-width: 768px) 45vw, 100vw"
-            className="object-cover"
-            priority
+            prioridade
           />
-          <HeroVideo />
         </div>
       </div>
     </section>

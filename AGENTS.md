@@ -26,12 +26,19 @@ renderizam esses objetos.
 
 ## Padrão 2 — Marcadores `// TODO:` para dados reais pendentes
 
-Campos que dependem de informação ou arquivo real da cliente (hoje: o
-vídeo do hero) ficam marcados com comentários `// TODO: ...` em
-`lib/content.ts`. Ao adicionar um novo
-campo desse tipo (ex: um novo link externo, um novo contato), siga o
-mesmo padrão: valor de exemplo + comentário `// TODO:` explicando o que
-precisa ser trocado antes de publicar.
+Campos que dependem de informação ou arquivo real da cliente ficam
+marcados com `// TODO: ...` em `lib/content.ts` (valor de exemplo +
+comentário explicando o que trocar antes de publicar). Hoje não há
+pendências; use o mesmo padrão ao adicionar um novo campo desse tipo.
+
+## Padrão 2.1 — Vídeos
+
+Vídeos ficam em `public/midias/<secao>/`, servidos pela própria Vercel
+(sem YouTube/Vimeo, para não ter logos). Antes de adicionar, converter
+para MP4 H.264 + AAC, 720p, `-movflags +faststart` e até ~8 MB (vídeo de
+celular costuma vir em HEVC, que o Chrome/Firefox no Windows não tocam).
+Para vídeo com fala, usar `components/VideoApresentacao.tsx` com uma capa
+JPG extraída do próprio vídeo.
 
 ## Padrão 3 — Pasta de mídia por seção em `public/midias/`
 

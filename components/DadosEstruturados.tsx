@@ -1,4 +1,4 @@
-import { hero, redesSociais, seo, site } from "@/lib/content";
+import { curso, hero, redesSociais, seo, site } from "@/lib/content";
 
 /**
  * Dados estruturados (JSON-LD, schema.org) para o Google entender quem é a
@@ -16,7 +16,7 @@ export default function DadosEstruturados() {
         name: site.nome,
         jobTitle: site.titulo,
         url: site.url,
-        image: `${site.url}${hero.midia.poster}`,
+        image: `${site.url}${site.foto}`,
         email: site.email,
         telephone: site.telefone,
         knowsAbout: seo.temas,
@@ -36,7 +36,7 @@ export default function DadosEstruturados() {
         name: `${site.nome} — ${site.titulo}`,
         description: seo.descricao,
         url: site.url,
-        image: `${site.url}${hero.midia.poster}`,
+        image: `${site.url}${site.foto}`,
         email: site.email,
         telephone: site.telefone,
         founder: { "@id": pessoaId },
@@ -44,6 +44,17 @@ export default function DadosEstruturados() {
         availableLanguage: "pt-BR",
         serviceType: seo.servicos
       },
+      ...[hero.video, curso.video].map((v) => ({
+        "@type": "VideoObject",
+        name: v.titulo,
+        description: v.descricao,
+        thumbnailUrl: `${site.url}${v.capa}`,
+        contentUrl: `${site.url}${v.src}`,
+        uploadDate: site.videosPublicadosEm,
+        duration: v.duracao,
+        inLanguage: "pt-BR",
+        creator: { "@id": pessoaId }
+      })),
       {
         "@type": "WebSite",
         "@id": `${site.url}/#site`,
