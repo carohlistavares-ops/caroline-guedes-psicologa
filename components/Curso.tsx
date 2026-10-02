@@ -6,9 +6,8 @@ export default function Curso() {
     <section id="curso" className="container-content py-20 border-t border-ink/10">
       <div className="rounded-lg bg-card border border-ink/10 p-8 md:p-14 grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
         <div>
-          <p className="eyebrow mb-3">{curso.eyebrow}</p>
-          <h2 className="text-3xl md:text-4xl mb-3">{curso.titulo}</h2>
-          <p className="font-display italic text-brand text-lg mb-5">
+          <h2 className="text-4xl md:text-5xl mb-3">{curso.titulo}</h2>
+          <p className="font-display italic font-medium text-brand text-xl mb-5">
             {curso.subtitulo}
           </p>
           <p className="text-ink/75 leading-relaxed mb-8 max-w-lg">{curso.texto}</p>

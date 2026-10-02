@@ -63,7 +63,7 @@ export const navegacao = {
 };
 
 export const redesSociais = {
-  eyebrow: "Vamos continuar em contato",
+  rotulo: "Vamos continuar em contato",
   titulo: "Redes sociais",
   links: [
     // O WhatsApp não entra aqui: ele já está nos botões do agendamento.
@@ -83,7 +83,6 @@ export const redesSociais = {
 };
 
 export const hero = {
-  eyebrow: "Psicologia clínica · TCC",
   titulo: "Um espaço ético e acolhedor para reconstruir a sua história",
   subtitulo:
     "Atendimento clínico on-line para todo o Brasil, fundamentado em evidências científicas, para cuidar da sua saúde mental com respeito ao seu tempo.",
@@ -105,7 +104,6 @@ export const hero = {
 };
 
 export const sobreMim = {
-  eyebrow: "Quem cuida de você",
   titulo: "Sobre mim",
   paragrafos: [
     "Sou psicóloga clínica, registrada no Conselho Regional de Psicologia da 13ª Região (CRP 13/12977), e atuo oferecendo um atendimento ético, acolhedor e fundamentado em evidências científicas, com foco na promoção da saúde mental e do bem-estar.",
@@ -121,7 +119,6 @@ export const sobreMim = {
 };
 
 export const trajetoria = {
-  eyebrow: "O caminho até aqui",
   titulo: "Trajetória",
   intro:
     "Ao longo da minha trajetória profissional, atuei em diferentes contextos da Psicologia, acompanhando demandas variadas — experiências que ampliaram minha visão sobre o cuidado em saúde mental e fortaleceram minha atuação clínica.",
@@ -152,7 +149,6 @@ export const trajetoria = {
 };
 
 export const curso = {
-  eyebrow: "Formação para mulheres",
   titulo: "Curso Mulher Livre",
   subtitulo: "Do apego emocional à reconstrução da sua autonomia",
   texto:
@@ -164,7 +160,6 @@ export const curso = {
 };
 
 export const agendamento = {
-  eyebrow: "Dê o primeiro passo",
   titulo: "Agende sua consulta",
   subtitulo:
     "Fale diretamente comigo pelo WhatsApp. Há vagas com valor social: escolha a opção abaixo. Retorno em até 1 dia útil.",

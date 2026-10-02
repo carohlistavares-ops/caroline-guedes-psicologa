@@ -5,7 +5,7 @@ export default function RedesSociais() {
     <section id="redes" className="container-content py-12 border-t border-ink/10">
       <h2 className="sr-only">{redesSociais.titulo}</h2>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-        <p className="eyebrow">{redesSociais.eyebrow}</p>
+        <p className="eyebrow">{redesSociais.rotulo}</p>
 
         <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
           {redesSociais.links.map((r) => {

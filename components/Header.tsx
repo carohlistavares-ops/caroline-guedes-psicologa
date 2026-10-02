@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="relative border-b border-ink/10 bg-paper">
       <div className="container-content flex items-center justify-between gap-3 py-4">
-        <a href="#top" className="font-display text-lg text-ink">
+        <a href="#top" className="font-display font-semibold text-xl text-ink">
           {site.nome}
           <span className="hidden sm:inline text-brand font-body text-sm ml-2">
             · {site.titulo}

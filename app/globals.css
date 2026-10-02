@@ -12,7 +12,12 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-display text-ink;
+    @apply font-display font-semibold text-ink;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-brand-light/40 text-ink;
   }
 
   :focus-visible {
@@ -27,11 +32,12 @@
   }
 }
 
-/* Em "components" (e não em "utilities") para que classes como
-   `text-ochre` possam trocar a cor do eyebrow em seções escuras. */
+/* Rótulo pequeno em maiúsculas (hoje só na linha de contatos). Não usar
+   acima de títulos: o título deve falar por si. Fica em "components" para
+   que classes como `text-ochre` possam trocar a cor. */
 @layer components {
   .eyebrow {
-    @apply font-mono text-xs tracking-[0.18em] uppercase text-wine;
+    @apply font-body font-semibold text-xs tracking-[0.18em] uppercase text-wine;
   }
 }
 

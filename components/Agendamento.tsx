@@ -24,8 +24,7 @@ export default function Agendamento() {
 
       <div className="relative container-content flex min-h-[560px] items-center py-16 md:py-24">
         <div className="w-full max-w-md rounded-lg bg-paper/95 p-8 shadow-sm backdrop-blur-sm md:p-10">
-          <p className="eyebrow mb-3">{agendamento.eyebrow}</p>
-          <h2 className="text-3xl md:text-4xl mb-4">{agendamento.titulo}</h2>
+          <h2 className="text-4xl md:text-5xl mb-4">{agendamento.titulo}</h2>
           <p className="text-ink/75 mb-8">{agendamento.subtitulo}</p>
 
           <div className="flex flex-col items-start gap-3">

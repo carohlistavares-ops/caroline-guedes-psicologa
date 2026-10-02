@@ -6,8 +6,7 @@ export default function Hero() {
   return (
     <section id="top" className="container-content pt-14 md:pt-20 pb-20 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <p className="eyebrow mb-4">{hero.eyebrow}</p>
-        <h1 className="text-4xl md:text-5xl leading-[1.08] mb-6">
+        <h1 className="text-[2.6rem] md:text-[3.6rem] leading-[1.04] mb-6">
           {hero.titulo}
         </h1>
         <p className="text-lg text-ink/75 max-w-md mb-8">{hero.subtitulo}</p>
@@ -19,7 +18,7 @@ export default function Hero() {
           >
             {hero.cta}
           </a>
-          <span className="font-mono text-xs text-ink/70">{site.crp}</span>
+          <span className="text-xs font-semibold tracking-[0.08em] tabular-nums text-ink/70">{site.crp}</span>
         </div>
 
         <p className="mt-6 text-sm text-ink/70">{site.cidade}</p>

@@ -5,8 +5,7 @@ export default function Trajetoria() {
   return (
     <section id="trajetoria" className="bg-brand-dark text-paper py-20">
       <div className="container-content">
-        <p className="eyebrow text-ochre mb-3">{trajetoria.eyebrow}</p>
-        <h2 className="text-3xl md:text-4xl mb-4 text-paper">{trajetoria.titulo}</h2>
+        <h2 className="text-4xl md:text-5xl mb-4 text-paper">{trajetoria.titulo}</h2>
         <p className="text-paper/80 max-w-2xl mb-14">{trajetoria.intro}</p>
 
         <div className="relative pl-12 md:pl-0">
@@ -23,10 +22,10 @@ export default function Trajetoria() {
                   aria-hidden="true"
                 />
                 <div className={i % 2 === 1 ? "md:col-start-2" : ""}>
-                  <span className="font-mono text-xs text-ochre">
+                  <span className="text-sm font-semibold tabular-nums text-ochre">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="text-xl mt-1 mb-2 text-paper">{item.titulo}</h3>
+                  <h3 className="text-2xl mt-1 mb-2 text-paper">{item.titulo}</h3>
                   <p className="text-paper/80 leading-relaxed">{item.texto}</p>
                 </div>
               </li>

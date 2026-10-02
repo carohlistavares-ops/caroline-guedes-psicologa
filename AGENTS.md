@@ -59,10 +59,13 @@ classes de tema já definidas:
 
 - Cores: `ink`, `paper`, `card`, `brand` (+ `brand-light`/`brand-dark`),
   `wine` (+ `wine-light`/`wine-dark`), `ochre`.
-- Fontes: `font-display` (Fraunces, títulos), `font-body` (Work Sans,
-  texto corrido), `font-mono` (IBM Plex Mono, labels/dados como o CRP).
+- Fontes: `font-display` (Cormorant Garamond, títulos, sempre em
+  `font-semibold`) e `font-body` (Nunito Sans, texto corrido, rótulos e
+  dados como o CRP). Não há fonte monoespaçada: rótulos usam a Nunito em
+  maiúsculas com `tracking`, e números usam `tabular-nums`.
 - Utilitário `.container-content` para o max-width padrão das seções, e
-  `.eyebrow` para os pequenos rótulos acima dos títulos.
+  `.eyebrow` para rótulos pequenos em maiúsculas (hoje só na linha de
+  contatos). Não colocar rótulos acima dos títulos: o título fala por si.
 
 As cores são definidas uma única vez em `lib/cores.ts` (o Tailwind importa
 de lá). Se for necessário um novo tom, adicione-o em `lib/cores.ts` com um

@@ -13,9 +13,8 @@ const config: Config = {
     extend: {
       colors: cores,
       fontFamily: {
-        display: ["var(--font-fraunces)", "serif"],
-        body: ["var(--font-work-sans)", "sans-serif"],
-        mono: ["var(--font-plex-mono)", "monospace"]
+        display: ["var(--font-cormorant)", "Georgia", "serif"],
+        body: ["var(--font-nunito-sans)", "system-ui", "sans-serif"]
       },
       maxWidth: {
         content: "1180px"

@@ -1,28 +1,21 @@
 import type { Metadata } from "next";
-import { Fraunces, Work_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Cormorant_Garamond, Nunito_Sans } from "next/font/google";
 import DadosEstruturados from "@/components/DadosEstruturados";
 import { seo, site } from "@/lib/content";
 import "./globals.css";
 
-const fraunces = Fraunces({
+// Títulos: serifada clássica e elegante. Texto: sans humanista e arredondada.
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["500", "600"],
   style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  variable: "--font-cormorant",
   display: "swap"
 });
 
-const workSans = Work_Sans({
+const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-work-sans",
-  display: "swap"
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono",
+  variable: "--font-nunito-sans",
   display: "swap"
 });
 
@@ -57,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${fraunces.variable} ${workSans.variable} ${plexMono.variable}`}>
+    <html lang="pt-BR" className={`${cormorant.variable} ${nunitoSans.variable}`}>
       <body>
         <DadosEstruturados />
         {children}
