@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { cores } from "@/lib/cores";
 import { site } from "@/lib/content";
 
-// Favicon gerado pelo Next: monograma com as iniciais sobre o verde da marca.
+// Favicon gerado pelo Next: monograma com as iniciais sobre o tom da marca.
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 // Edge: o runtime Node do @vercel/og quebra no Windows (Next 14).

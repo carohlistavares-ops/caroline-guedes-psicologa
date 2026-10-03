@@ -8,7 +8,7 @@ publicado em **https://www.psicarolineguedes.com.br**. Feito em
 
 - **Hero** e **Curso** — vídeos com fala da Caroline (prévia sem som em
   loop + botão "ouvir" que recomeça com som; player nativo, sem logos)
-- **Sobre mim** — abordagem (TCC), especializações e vagas de valor social
+- **Sobre mim** — formação, especializações e vagas de valor social
 - **Trajetória** — linha do tempo da história profissional
 - **Curso Mulher Livre** — apresentação com link para a página de venda
 - **Agende sua consulta** — dois botões de WhatsApp com mensagem pronta

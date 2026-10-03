@@ -114,7 +114,7 @@ em português do Brasil. Manter esse padrão em qualquer texto novo.
   página, adicione-a ao `sitemap.ts`.
 - Dados estruturados (JSON-LD) ficam em `components/DadosEstruturados.tsx`.
 - Termo de busca principal: **"valor social"** (psicóloga on-line com valor
-  social, TCC). **Código de Ética do Psicólogo, art. 20:** nunca usar o
+  social). **Código de Ética do Psicólogo, art. 20:** nunca usar o
   preço como propaganda — nada de valores em reais, "barato", "promoção",
   descontos ou comparação de preço, nem no texto, nem nos metadados, nem
   no JSON-LD (sem `priceRange`).

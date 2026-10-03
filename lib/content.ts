@@ -29,11 +29,11 @@ export const site = {
 };
 
 // Textos para buscadores e compartilhamento (WhatsApp, Instagram etc.).
-// Termo principal: "psicóloga on-line com valor social" + TCC.
+// "Valor social" fica na descrição e no texto da página, não no título.
 export const seo = {
-  titulo: "Psicóloga Online com Valor Social | TCC | Caroline Guedes",
+  titulo: "Psicóloga Online | Caroline Guedes · CRP 13/12977",
   descricao:
-    "Atendimento psicológico on-line para todo o Brasil, com vagas de valor social. Terapia Cognitivo-Comportamental com Caroline Guedes, CRP 13/12977.",
+    "Atendimento psicológico on-line para todo o Brasil, com vagas de valor social. Caroline Guedes, psicóloga clínica, CRP 13/12977.",
   // Imagem de compartilhamento (WhatsApp, Instagram etc.), 1200x630 e leve
   // (< 300 KB, senão o WhatsApp pode não exibir a prévia). Se mudar o título
   // ou a foto do hero, refaça esta arte também.
@@ -42,11 +42,9 @@ export const seo = {
   servicos: [
     "Psicoterapia on-line",
     "Atendimento psicológico com valor social",
-    "Terapia Cognitivo-Comportamental (TCC)",
     "Terapia para dependência emocional"
   ],
   temas: [
-    "Terapia Cognitivo-Comportamental",
     "Neuropsicologia",
     "Psicologia em Saúde",
     "Dependência emocional",
@@ -108,12 +106,10 @@ export const sobreMim = {
   titulo: "Sobre mim",
   paragrafos: [
     "Sou psicóloga clínica, registrada no Conselho Regional de Psicologia da 13ª Região (CRP 13/12977), e atuo oferecendo um atendimento ético, acolhedor e fundamentado em evidências científicas, com foco na promoção da saúde mental e do bem-estar.",
-    "Atuo com base na Terapia Cognitivo-Comportamental (TCC), uma abordagem científica que compreende a relação entre pensamentos, emoções e comportamentos. Por meio dessa abordagem, auxilio na identificação e modificação de padrões que geram sofrimento, promovendo o desenvolvimento de estratégias práticas, o fortalecimento da autonomia e mudanças consistentes para uma vida mais saudável.",
     "Minhas especializações em Neuropsicologia e Psicologia em Saúde ampliam minha compreensão do funcionamento cognitivo, emocional e comportamental, permitindo uma avaliação integral de cada pessoa. Essas especializações me proporcionaram habilidades para identificar fatores que influenciam a saúde mental, compreender diferentes transtornos psicológicos, realizar avaliações com embasamento científico e planejar intervenções individualizadas, sempre considerando a história, o contexto e as necessidades de cada paciente.",
     "Acredito que o cuidado com a saúde mental precisa ser acessível. Por isso, reservo vagas de atendimento psicológico com valor social para quem não pode arcar com o valor integral da sessão. Também dedico parte importante da minha atuação à saúde emocional da mulher, acompanhando mulheres em situações de dependência emocional."
   ],
   destaques: [
-    { rotulo: "Abordagem", valor: "Terapia Cognitivo-Comportamental" },
     { rotulo: "Especializações", valor: "Neuropsicologia · Psicologia em Saúde" },
     { rotulo: "Modalidades", valor: "On-line · todo o Brasil" }
   ]
